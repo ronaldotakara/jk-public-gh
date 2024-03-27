@@ -18,7 +18,7 @@ pipeline {
         steps {
           sh '''
           # docker stop web_ctr
-          sudo docker run --rm -d -p 3000:3000 --name webctr webapp:${BUILD_NUMBER}
+          docker run --rm -d -p 3000:3000 --name webctr webapp:${BUILD_NUMBER}
           '''
         }
 
