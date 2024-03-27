@@ -16,10 +16,10 @@ pipeline {
 
       stage{'Deploying Application'} {
         steps {
-          sh ´´´
+          sh '''
           # docker stop web_ctr
           docker run --rm -d -p 3000:3000 --name webctr webapp:${BUILD_NUMBER}
-          ´´´
+          '''
         }
 
       }
