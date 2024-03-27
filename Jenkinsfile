@@ -25,10 +25,3 @@ pipeline {
       }
     }
 }
-
-
-
-
-
-sh 'docker stop webapp_ctr'
-sh 'docker run --rm -d -p 3000:3000 --name webapp_ctr webapp:${BUILD_NUMBER}'
