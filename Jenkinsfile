@@ -8,13 +8,13 @@ pipeline {
             }
         }
 
-        stage{'Building Image'} {
+        stage('Building Image') {
           steps {
             sh 'docker build -t webapp:${BUILD_NUMBER} .'
           }
         }
 
-      stage{'Deploying Application'} {
+      stage('Deploying Application') {
         steps {
           sh '''
           # docker stop web_ctr
